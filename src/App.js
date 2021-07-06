@@ -8,9 +8,6 @@ import Page from './page';
 //import Users from './components/table';
 
 class App extends Component {
-  state = { 
-    token : window.localStorage.getItem('token')
-   }
   render() { 
     return ( 
       <Router>

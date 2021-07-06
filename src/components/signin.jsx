@@ -24,8 +24,8 @@ class Signin extends Component {
     try{
       console.log(this.state.user)
       const res = await axios.post('http://localhost:8080/users/login',this.state.user)
-      localStorage.setItem('token',res.data.Message)
-      if (res.data.Status === "SUCCESS"){
+      localStorage.setItem('token',res.data.message)
+      if (res.data.status === "SUCCESS"){
         window.location = 'http://localhost:3000/';
       }
     }catch(err){

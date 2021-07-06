@@ -26,19 +26,19 @@ class Table extends Component {
     columns: [
       {
         name: 'ID',
-        selector: 'ID',
+        selector: 'id',
         sortable: true,
         grow: -1,
       },
       {
         name: 'Username',
-        selector: 'Username',
+        selector: 'username',
         sortable: true,
         grow: 1,
       },
       {
         name: 'Hashed Password',
-        selector: 'Password',
+        selector: 'password',
         sortable: true,
         grow: 4,
       },
@@ -54,6 +54,8 @@ class Table extends Component {
       return selectedRow.ID
     })
     setSelectedId(id)
+    console.log(id)
+    //console.log(this.props.selectedId)
     //make button disabled if selected id is more than 1
     if (await this.props.selectedId.length === 1){
       setDisabledBtn(false)
